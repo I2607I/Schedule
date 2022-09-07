@@ -11,6 +11,7 @@ class Lesson(models.Model):
     is_even = models.ForeignKey('Parity', on_delete=models.PROTECT, null=False)
     classroom = models.CharField(max_length=20, blank=True)
 
+
     # def get_absolute_url(self):
     #     return Subject.get_absolute_url(Subject)
     #     #return reverse("subject", kwargs={"subject_slug": Subject.slug})
