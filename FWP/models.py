@@ -16,13 +16,6 @@ class Lesson(models.Model):
     #     return Subject.get_absolute_url(Subject)
     #     #return reverse("subject", kwargs={"subject_slug": Subject.slug})
 
-
-
-
-
-
-
-
 class Day(models.Model):
     name = models.CharField(max_length=20)
     slug = models.SlugField(max_length=20, unique=True, db_index=True)

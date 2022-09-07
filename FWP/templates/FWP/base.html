@@ -2,14 +2,6 @@
 {% comment %} {% load character_tags %} {% endcomment %}
 <!DOCTYPE html>
 <html>
-        {% comment %} <style>
-                header {
-                    height: 101px;
-                    width: 100%;
-                    background: url('Путь к файлу');
-                }
-            </style> {% endcomment %}
-            
 <head>
 	<title>{{title}}</title>
 	    <link type="text/css" href="{% static 'FWP/css/print.css' %}" rel="stylesheet" />
@@ -23,16 +15,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-        {% comment %} <div style = "background: linear-gradient(45deg, rgb(135,206,250), rgb(144,238,144)); height:100px;">
-                
-            <ul class="nav">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Расписание</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">О сайте</a></li>
-		    </ul>
-        </div> {% endcomment %}
-
         <div style = "background: linear-gradient(45deg, rgb(235,106,250), rgb(44,238,144));">
             <ul class="navigation">
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -43,7 +25,6 @@
         </div>
 
     <div style="float:left;">
-        {% comment %} <p>Ты котик {% endcomment %}
     </div>
 
     
