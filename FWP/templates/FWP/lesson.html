@@ -1,0 +1,18 @@
+{% extends 'FWP/base.html' %}
+
+{% block content %}
+<table class="table_blur">
+    <tbody>
+{% for l in lessons %}
+			<tr>
+                <td>{{l.subject}}</td> 
+                <td>{{l.day}}</td> 
+                <td>{{l.type_lesson}}</td>
+                <td>{{l.number_lesson}} пара</td>
+                <td>{{l.classroom}}</td> 
+                <td>{{l.is_even}}</td>
+            </tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock content %}

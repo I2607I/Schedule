@@ -1,0 +1,54 @@
+{% load static %}
+{% comment %} {% load character_tags %} {% endcomment %}
+<!DOCTYPE html>
+<html>
+        {% comment %} <style>
+                header {
+                    height: 101px;
+                    width: 100%;
+                    background: url('Путь к файлу');
+                }
+            </style> {% endcomment %}
+            
+<head>
+	<title>{{title}}</title>
+	    <link type="text/css" href="{% static 'FWP/css/print.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/group.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/nav.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/flex.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/nav2.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/subject.css' %}" rel="stylesheet" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	{% comment %} <link rel="shortcut icon" href="{% static 'character/images/main.ico' %}" type="image/x-icon"/> {% endcomment %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+        {% comment %} <div style = "background: linear-gradient(45deg, rgb(135,206,250), rgb(144,238,144)); height:100px;">
+                
+            <ul class="nav">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Расписание</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">О сайте</a></li>
+		    </ul>
+        </div> {% endcomment %}
+
+        <div style = "background: linear-gradient(45deg, rgb(235,106,250), rgb(44,238,144));">
+            <ul class="navigation">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'sc' %}">Расписание</a></li>
+                <li><a href="#">Liza</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </div>
+
+    <div style="float:left;">
+        {% comment %} <p>Ты котик {% endcomment %}
+    </div>
+
+    
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

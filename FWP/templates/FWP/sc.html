@@ -1,0 +1,68 @@
+{% extends 'FWP/base.html' %}
+
+{% block content %}
+<div style = "background: linear-gradient(45deg, rgb(35,206,250), rgb(44,238,144));">
+<ul class="flex-container">
+    <li class="flex-item"><a href="{% url 'sc' %}/odd">Чётная неделя</a></li>
+    <li class="flex-item"><a href="{% url 'sc' %}/even">Нечётная неделя</a></li>
+    <li class="flex-item"><a>Сейчас {{cur_week}} неделя</a></li>
+  </ul>
+</div>
+  
+ 
+
+
+    <div style="width=50%;padding-top:30px;padding-left:30px;padding-right:30px;">
+    <table class="time-table" cellspacing="0">
+        <colgroup><col class="col1">
+        <col span="6" class="coln">
+        </colgroup>
+        <tbody>
+        <tr>
+        {% for d in days %}
+            <th><a href="#">{{d}}</a></th>
+        {% endfor %}
+        </tr>
+        {% for n in numbers %}
+        <tr>
+            {% for d in days %}
+                <td>
+                    {% for l in lessons %}
+                    {% if l.day == d and l.number_lesson == n %}
+                        {% comment %} {{l.is_even}} {% endcomment %}
+                        {% if l.day not in time %}
+                        <div class="cell">
+                            {% if l.type_lesson in lections %}
+                            <span class="type lek" data-toggle="tooltip" data-placement="right" title="" data-original-title="лекция">лек</span>
+                            {% endif %}
+                            {% if l.type_lesson in seminars %}
+                            <span class="type pr" data-toggle="tooltip" data-placement="right" title="" data-original-title="практическое занятие">пр</span>
+                            {% endif %}
+                            <div class="subject" data-toggle="tooltip" data-placement="top" title="">
+                                <a href="{{l.subject.get_absolute_url}}">{{l.subject}}</a>  
+                            </div>
+                
+                            <div class="room">
+                                <a>{{l.classroom}}</a>            
+                            </div>
+                        {% endif %}
+                            {% if l.day in time %}
+                                <p>{{l.number_lesson.start}} -
+                                <p>{{l.number_lesson.end}}
+                            {% endif %}
+                            {% comment %} <a class="tutor">Егоров А.А.</a>    {% endcomment %}
+                        </div>
+                    {% endif %}
+                    {% endfor %}
+
+
+                </td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+        {% comment %} <tr><th>текст заголовка</th><th>текст заголовка</th></tr> <!--ряд с ячейками заголовков-->
+        <tr><td>данные</td><td>данные</td></tr> <!--ряд с ячейками тела таблицы--> {% endcomment %}
+        </tbody>
+        </table>
+        </div>
+{% endblock content %}
