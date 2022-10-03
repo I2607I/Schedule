@@ -1,8 +1,8 @@
 # Schedule
 
 - Страница "Расписание"
-![e](/readme1.png)
+![](/readme1.png)
 
 - Можно нажать на определённый предмет
 
-![f](/readme2.png)
+![](/readme2.png)
