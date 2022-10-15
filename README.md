@@ -5,4 +5,4 @@
 
 - Можно нажать на определённый предмет
 
-![vаааааdаfаfgаfqgаd](/readme2.png)
+![vаааааdаffаfgаfqgаd](/readme2.png)
