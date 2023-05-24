@@ -1,0 +1,35 @@
+{% load static %}
+{% comment %} {% load character_tags %} {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	    <link type="text/css" href="{% static 'FWP/css/print.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/group.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/nav.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/flex.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/nav2.css' %}" rel="stylesheet" />
+        <link type="text/css" href="{% static 'FWP/css/subject.css' %}" rel="stylesheet" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	{% comment %} <link rel="shortcut icon" href="{% static 'character/images/main.ico' %}" type="image/x-icon"/> {% endcomment %}
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+        <div style = "background: linear-gradient(45deg, rgb(235,106,250), rgb(44,238,144));">
+            <ul class="navigation">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'sc' %}">Расписание</a></li>
+                {% comment %} <li><a href="#">Liza</a></li>
+                <li><a href="#">Contacts</a></li> {% endcomment %}
+            </ul>
+        </div>
+
+    <div style="float:left;">
+    </div>
+
+    
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

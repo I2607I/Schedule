@@ -1,0 +1,121 @@
+* { -webkit-print-color-adjust: exact; }
+@page { size:landscape; }
+@page :left {
+    margin: 1cm 3cm 1cm 1.5cm;
+}
+@page :right {
+    margin: 1cm 3cm 1cm 1.5cm;
+}
+html, body, .container{
+    position: relative;
+    margin: 0px;
+    width: 100%;
+}
+header,footer,.container-nav,.breadcrumb,.button,.nav-print,.info-schedule,.tooltip
+{display: none !important;}
+
+a[href]:after {
+    content: "";
+}
+
+th,td{
+    text-decoration: none;
+    border: solid 0.5px #000 !important;
+}
+
+table {
+    table-layout: auto;
+    width: auto;
+}
+.col1 {
+    width: 10%;
+}
+.coln {
+    width: 15%;
+}
+
+.time-table {
+    margin-bottom: 0px;
+    width: 100%;
+}
+.time-table tr {
+    height: auto;
+}
+.time-table tr:nth-child(even) td:nth-child(even), .time-table tr:nth-child(odd) td:nth-child(odd) {
+    background: none;
+}
+.time-table tr th {
+    text-decoration: none;
+    text-align: left;
+    padding-left: 10px;
+}
+.time-table tr td {
+    text-align: left;
+    padding-left: 10px;
+}
+.time-table tr th:first-child, .time-table tr td:first-child {
+    text-decoration: none;
+    padding-left: 10px !important;
+}
+.time-table tr td:first-child {
+    font-size: 20px;
+    background: none !important;
+}
+.time-table tr:first-child {
+    height: 50px;
+    background-color: #6dbd46;
+    font-size: 18px;
+    color: white;
+}
+.time-table tr:not(:first-child) {
+    vertical-align: top;
+}
+.time-table tr:not(:first-child) td {
+    padding: 0px;
+}
+
+.cell {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+}
+.cell:not(:first-child) {
+    border-top: 1px solid #000;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.cell:not(:first-child):before{
+    border-top: none;
+}
+.subject{
+    padding-right: 19px;
+    cursor: none;
+}
+.subject, .room, .tutor, .week, .group {
+    font-size: 20px;
+    color: #000;
+}
+
+a.tutor, a.group {
+    font-family: PTSansRegular;
+    color: #000;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.week {
+    background: none;
+    padding: 0 ;
+    margin-top: 5px;
+}
+
+.lek, .pr, .lab{
+    background: none;
+}
+
+
+
+
